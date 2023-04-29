@@ -236,3 +236,11 @@ function addClickLineTwoPlayer(){
   });
 }
 addClickLineTwoPlayer()
+
+// funcion para cantar la linea 2 de player
+function winLineTwoPlayer() {
+    if (arrayWinLineTwoPlayer.length === 5) {
+      contador++
+      //linePlayer()
+    }
+}
