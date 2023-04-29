@@ -194,3 +194,21 @@ function fivePlayer() {
       return arrayLinePlayer;
     }
 }
+
+// funcion de click para tachar la linea uno del player
+
+let lineOnePlayer
+function addClickLinePlayer(){
+  lineOnePlayer = fivePlayer()
+  arrayLinePlayer.forEach((e) => {
+    e.addEventListener("click", () => {
+      e.classList.add("eliminate");
+      if (arrayWinLinePlayer.includes(e)) {
+      } else {
+        arrayWinLinePlayer.push(e);
+      }
+      //winLinePlayer()
+    });
+  });
+}
+addClickLinePlayer()
