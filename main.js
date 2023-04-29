@@ -346,7 +346,7 @@ function FiveTwoCpu() {
 }
 FiveTwoCpu()
 
-// funcion de tachadoi automatico si el numero del bombo es igual al de la lina 2
+// funcion de tachado automatico si el numero del bombo es igual al de la lina 2
 function eliminateLineTwoCpu() {
     for (let i = 0; i < arrayHistory.length; i++) {
       for (let a = 0; a < arrayLineTwoCpu.length; a++) {
@@ -360,5 +360,13 @@ function eliminateLineTwoCpu() {
           //winLineTwoCpu()
         }
       }
+    }
+}
+
+// funcion para contar la linea 2 de la cpu
+function winLineTwoCpu() {
+    if (arrayWinLineTwoCpu.length === 5) {
+      contador++
+      //lineCpu()
     }
 }
