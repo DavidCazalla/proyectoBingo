@@ -393,7 +393,7 @@ function eliminateLineThreeCpu() {
             arrayWinLineThreeCpu.push(arrayLineThreeCpu[a]);
           }
           console.log(arrayWinLineThreeCpu, 'linea 3')
-          //winLineThreeCpu()
+          winLineThreeCpu()
         }
       }
     }
