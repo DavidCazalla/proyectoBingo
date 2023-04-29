@@ -254,3 +254,20 @@ function FiveThreePlayer() {
       return arrayLineThreePlayer;
     }
 }
+
+// funcion para tachar la ultima fila de la linea player
+let lineThreePlayer
+function addClickLineThreePlayer(){
+    lineThreePlayer = FiveThreePlayer()
+    arrayLineThreePlayer.forEach((e) => {
+      e.addEventListener("click", () => {
+        e.classList.add("eliminate")
+        if (arrayWinLineThreePlayer.includes(e)) {
+        } else {
+          arrayWinLineThreePlayer.push(e);
+        }
+        //winLineThreePlayer()
+      })
+    })
+  }
+addClickLineThreePlayer()
