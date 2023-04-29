@@ -15,6 +15,21 @@ let arrayHistory = []
 let cardPlayer = []
 let arrayCpu = []
 let cardCpu = []
+let arrayBingoPlayer = []
+let arrayBingoCpu = []
+let arrayLinePlayer = []
+let arrayLineTwoPlayer = []
+let arrayLineThreePlayer = []
+let arrayLineCpu = []
+let arrayLineTwoCpu = []
+let arrayLineThreeCpu = []
+let arrayWinLinePlayer = []
+let arrayWinLineTwoPlayer = []
+let arrayWinLineThreePlayer = []
+let arrayWinLineCpu = []
+let arrayWinLineTwoCpu = []
+let arrayWinLineThreeCpu = []
+let contador = 0
 
 //  funcion para sacar numero aleatorio
 function getnumberRandom() {
@@ -116,3 +131,20 @@ function introduceDivCpu() {
     }
 }
 introduceDivCpu()
+
+// funcion que con click tacha la el div del jugador 
+let cell = document.querySelectorAll(".player")
+function addClickableToCartonPlayer() {
+    cell = document.querySelectorAll(".player")
+    cell.forEach((e) => {
+      e.addEventListener("click", () => {
+        e.classList.add("eliminate");
+        if (arrayBingoPlayer.includes(e)) {
+        } else {
+          arrayBingoPlayer.push(e);
+        }
+        //winBingoPlayer();
+      });
+    });
+  }
+  addClickableToCartonPlayer()
