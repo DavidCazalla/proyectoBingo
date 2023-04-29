@@ -184,3 +184,13 @@ function winBingoCpu() {
 // crear el h3 para que salga cuando se canta linea
 let h3 = document.createElement("h3");
 h3.setAttribute("class", "line");
+
+// funcion para crear el array con la primera liena del jugador
+function fivePlayer() {
+    for (let a = 0; a < cell.length; a++) {
+      for (let i = 0; i < 5; i++) {
+        arrayLinePlayer.push(cell[i]);
+      }
+      return arrayLinePlayer;
+    }
+}
