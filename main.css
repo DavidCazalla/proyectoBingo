@@ -100,3 +100,15 @@
     height: 400px;
 
 }
+.balls{
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 10px solid rgb(255, 145, 0);
+}
