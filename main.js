@@ -164,7 +164,7 @@ function eliminateCpu() {
       }
     }
   }
-  //winBingoCpu();
+  winBingoCpu();
 }
 
 // funcion que jugador gana el bingo
