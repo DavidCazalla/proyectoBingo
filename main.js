@@ -326,3 +326,12 @@ function eliminateLineCpu(){
     }
   }
 }
+
+// funcion para cantar linea 1 de la cpu
+function winLineCpu() {
+    if (arrayWinLineCpu.length === 5) {
+      contador++
+      //lineCpu()
+    }
+}
+
