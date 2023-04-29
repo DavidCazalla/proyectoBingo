@@ -271,3 +271,11 @@ function addClickLineThreePlayer(){
     })
   }
 addClickLineThreePlayer()
+
+// funcion para cantar la linea 3 de player
+function winLineThreePlayer() {
+    if (arrayWinLineThreePlayer.length === 5) {
+      contador++
+      //linePlayer()
+    }
+}
