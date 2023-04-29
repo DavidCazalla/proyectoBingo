@@ -143,7 +143,7 @@ function addClickableToCartonPlayer() {
         } else {
           arrayBingoPlayer.push(e);
         }
-        //winBingoPlayer();
+        winBingoPlayer();
       });
     });
 }
