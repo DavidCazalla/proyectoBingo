@@ -309,7 +309,7 @@ function fiveCpu() {
 }
 fiveCpu()
 
-// funcion de tachado automatico si el nuemro del bombo es igual al de la liena 1
+// funcion de tachado automatico si el numero del bombo es igual al de la liena 1
 let lineOneCpu
 function eliminateLineCpu(){
   for (let i = 0; i < arrayHistory.length; i++) {
@@ -345,3 +345,20 @@ function FiveTwoCpu() {
     }
 }
 FiveTwoCpu()
+
+// funcion de tachadoi automatico si el numero del bombo es igual al de la lina 2
+function eliminateLineTwoCpu() {
+    for (let i = 0; i < arrayHistory.length; i++) {
+      for (let a = 0; a < arrayLineTwoCpu.length; a++) {
+        if (arrayHistory[i] == arrayLineTwoCpu[a].textContent) {
+          arrayLineTwoCpu[a].classList.add("eliminate");
+          if (arrayWinLineTwoCpu.includes(arrayLineTwoCpu[a])) {
+            console.log(arrayWinLineTwoCpu)
+          } else {
+            arrayWinLineTwoCpu.push(arrayLineTwoCpu[a]);
+          }
+          //winLineTwoCpu()
+        }
+      }
+    }
+}
