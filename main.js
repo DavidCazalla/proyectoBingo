@@ -96,9 +96,23 @@ function arrayCardsCpu() {
 }
 arrayCardsCpu();
 
-// Funcion que ordena de menor mayor los array de la cpu
+// funcion que ordena de menor mayor los array de la cpu
 function orderArrayCpu(){
     arrayCpu.sort(function (a, b) {
       return a - b;
     });
   }
+
+// funcion que pinta los numeros del carton de la cpu en html
+function introduceDivCpu() {
+    let numberCpu = document.createElement("div");
+    numberCpu.setAttribute("class", "numberCpu");
+    for (let i = 0; i < 15; i++) {
+      let divCpu = document.createElement("div");
+      divCpu.setAttribute("class", "cpu");
+      divCpu.textContent = arrayCpu[i];
+      cartonCpu.append(numberCpu);
+      numberCpu.append(divCpu);
+    }
+}
+introduceDivCpu()
