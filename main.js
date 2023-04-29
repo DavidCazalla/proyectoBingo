@@ -34,7 +34,7 @@ let contador = 0
 // funcion boton para sacar los numeros del bombo
 button.addEventListener("click", () => {
     numberRandomUnique();
-    //visualArrayHistory();
+    visualArrayHistory();
 });
 
 //  funcion para sacar numero aleatorio
