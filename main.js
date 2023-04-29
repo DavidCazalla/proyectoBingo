@@ -279,3 +279,11 @@ function winLineThreePlayer() {
       //linePlayer()
     }
 }
+
+// funcion para que salga alerta de linea player
+function linePlayer(){
+    if(contador === 1){
+      h3.textContent = "El jugador a cantado linea + 50 puntos";
+      comments.append(h3);
+    }
+}
