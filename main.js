@@ -297,3 +297,14 @@ function linePlayer(){
       comments.append(h3);
     }
 }
+
+// funcion para coger los 5 primeros numeros para crear la liena 1 de la cpu
+function fiveCpu() {
+    for (let a = 0; a < cells.length; a++) {
+      for (let i = 0; i < 5; i++) {
+        arrayLineCpu.push(cells[i]);
+      }
+      return arrayLineCpu;
+    }
+}
+fiveCpu()
