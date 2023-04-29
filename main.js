@@ -276,7 +276,7 @@ function addClickLineThreePlayer(){
         } else {
           arrayWinLineThreePlayer.push(e);
         }
-        //winLineThreePlayer()
+        winLineThreePlayer()
       })
     })
   }
