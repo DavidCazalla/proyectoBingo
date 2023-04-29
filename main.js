@@ -219,3 +219,20 @@ function winLinePlayer() {
       //linePlayer()
     }
 }
+
+// funcion click para eliminar la linea 2
+let lineTwoPlayer
+function addClickLineTwoPlayer(){
+  lineTwoPlayer = fiveTwoPlayer()
+  arrayLineTwoPlayer.forEach((e) => {
+    e.addEventListener("click", () => {
+      e.classList.add("eliminate");
+      if (arrayWinLineTwoPlayer.includes(e)) {
+      } else {
+        arrayWinLineTwoPlayer.push(e);
+      }
+      //winLineTwoPlayer()
+    });
+  });
+}
+addClickLineTwoPlayer()
