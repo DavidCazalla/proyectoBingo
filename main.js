@@ -33,7 +33,7 @@ function visualArrayHistory() {
       balls.textContent = numRandom;
       containerBalls.append(balls);
     }
-  }
+}
 
 // funcion para crear los 15 numeros del jugador aleatorios
 function arrayCardsPlayer() {
@@ -46,5 +46,12 @@ function arrayCardsPlayer() {
       }
     }
     return arrayPlayer;
-  }
-  arrayCardsPlayer();
+}
+arrayCardsPlayer();
+
+// funcion para ordenar los numeros del carton del jugador de menor a mayor
+function orderArrayPlayer(){
+    arrayPlayer.sort(function (a, b) {
+      return a - b;
+    });
+}
