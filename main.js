@@ -286,7 +286,7 @@ addClickLineThreePlayer()
 function winLineThreePlayer() {
     if (arrayWinLineThreePlayer.length === 5) {
       contador++
-      //linePlayer()
+      linePlayer()
     }
 }
 
