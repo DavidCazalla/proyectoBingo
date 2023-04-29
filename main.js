@@ -196,7 +196,6 @@ function fivePlayer() {
 }
 
 // funcion de click para tachar la linea uno del player
-
 let lineOnePlayer
 function addClickLinePlayer(){
   lineOnePlayer = fivePlayer()
@@ -212,3 +211,11 @@ function addClickLinePlayer(){
   });
 }
 addClickLinePlayer()
+
+// funcion player para introducir lo div tachados en un arraylineuno
+function winLinePlayer() {
+    if (arrayWinLinePlayer.length === 5) {
+      contador++
+      //linePlayer()
+    }
+}
