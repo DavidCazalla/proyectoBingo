@@ -377,8 +377,24 @@ function FiveThreeCpu() {
       for (let i = 10; i < 15; i++) {
         arrayLineThreeCpu.push(cells[i]);
       }
-      console.log(arrayLineThreeCpu)
       return arrayLineThreeCpu;
     }
   }
 FiveThreeCpu()
+
+// funcion de tachado automatico si el numero de la linea 3 coincide con el bombo
+function eliminateLineThreeCpu() {
+    for (let i = 0; i < arrayHistory.length; i++) {
+      for (let a = 0; a < arrayLineThreeCpu.length; a++) {
+        if (arrayHistory[i] == arrayLineThreeCpu[a].textContent) {
+          arrayLineThreeCpu[a].classList.add("eliminate");
+          if (arrayWinLineThreeCpu.includes(arrayLineThreeCpu[a])) {
+          } else {
+            arrayWinLineThreeCpu.push(arrayLineThreeCpu[a]);
+          }
+          console.log(arrayWinLineThreeCpu, 'linea 3')
+          //winLineThreeCpu()
+        }
+      }
+    }
+}
