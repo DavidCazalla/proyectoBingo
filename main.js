@@ -1,6 +1,12 @@
 
 let container = document.querySelector(".container")
 let containerBalls = document.querySelector(".containerBalls")
+let cartonPlayer = document.querySelector(".cartonPlayer")
+let cartonCpu = document.querySelector(".cartonCpu")
+let cartons = document.querySelector(".cartons")
+let comments = document.querySelector(".comments")
+const button = document.getElementById("button")
+const clean = document.getElementById("clean")
 
 let arrayPlayer = []
 let arrayHistory = []
@@ -56,3 +62,17 @@ function orderArrayPlayer(){
       return a - b;
     });
 }
+
+// funcion que introducir los numeros aleatorios del player en el div html
+function introduceDivPlayer() {
+    let numberplayer = document.createElement("div");
+    numberplayer.setAttribute("class", "numberPlayer");
+    for (let i = 0; i < 15; i++) {
+      let divPlayer = document.createElement("div");
+      divPlayer.setAttribute("class", "player");
+      divPlayer.textContent = arrayPlayer[i];
+      cartonPlayer.append(numberplayer);
+      numberplayer.append(divPlayer);
+    }
+}
+introduceDivPlayer()
