@@ -44,6 +44,7 @@ function numberRandomUnique() {
     if (!arrayHistory.includes(numRandom)) {
       arrayHistory.push(numRandom);
       eliminateCpu()
+      eliminateLineCpu()
     } else {
       numberRandomUnique(arrayHistory);
     }
