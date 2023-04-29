@@ -133,3 +133,7 @@
     font-size: 30px;
     cursor: pointer;
 }
+.eliminate{
+    text-decoration: line-through;
+    color: red;
+}
