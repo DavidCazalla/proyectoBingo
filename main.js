@@ -308,3 +308,21 @@ function fiveCpu() {
     }
 }
 fiveCpu()
+
+// funcion de tachado automatico si el nuemro del bombo es igual al de la liena 1
+let lineOneCpu
+function eliminateLineCpu(){
+  for (let i = 0; i < arrayHistory.length; i++) {
+    for (let a = 0; a < arrayLineCpu.length; a++) {
+      if (arrayHistory[i] == arrayLineCpu[a].textContent) {
+        arrayLineCpu[a].classList.add("eliminate");
+        if (arrayWinLineCpu.includes(arrayLineCpu[a])) {
+          console.log(arrayWinLineCpu[a])
+        } else {
+          arrayWinLineCpu.push(arrayLineCpu[a]);
+        }
+        //winLineCpu()
+      }
+    }
+  }
+}
