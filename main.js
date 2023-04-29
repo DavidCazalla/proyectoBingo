@@ -398,3 +398,11 @@ function eliminateLineThreeCpu() {
       }
     }
 }
+
+// funcion de cantar linea 3 cpu
+function winLineThreeCpu() {
+    if (arrayWinLineThreeCpu.length === 5) {
+      contador++
+        //lineCpu()
+    }
+}
