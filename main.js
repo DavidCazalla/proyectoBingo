@@ -220,6 +220,16 @@ function winLinePlayer() {
     }
 }
 
+// funcion para coger las 5 segundas lienas de la linea 2 player
+function fiveTwoPlayer() {
+    for (let a = 0; a < cell.length; a++) {
+      for (let i = 5; i < 10; i++) {
+        arrayLineTwoPlayer.push(cell[i]);
+      }
+      return arrayLineTwoPlayer;
+    }
+}
+
 // funcion click para eliminar la linea 2
 let lineTwoPlayer
 function addClickLineTwoPlayer(){
