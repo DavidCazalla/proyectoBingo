@@ -241,7 +241,7 @@ function addClickLineTwoPlayer(){
       } else {
         arrayWinLineTwoPlayer.push(e);
       }
-      //winLineTwoPlayer()
+      winLineTwoPlayer()
     });
   });
 }
