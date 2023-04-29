@@ -91,7 +91,7 @@ function arrayCardsCpu() {
         i--;
       }
     }
-    
+    orderArrayCpu()
     return arrayCpu;
 }
 arrayCardsCpu();
