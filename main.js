@@ -241,7 +241,7 @@ addClickLineTwoPlayer()
 function winLineTwoPlayer() {
     if (arrayWinLineTwoPlayer.length === 5) {
       contador++
-      //linePlayer()
+      linePlayer()
     }
 }
 
