@@ -45,6 +45,7 @@ function arrayCardsPlayer() {
         i--;
       }
     }
+    orderArrayPlayer()
     return arrayPlayer;
 }
 arrayCardsPlayer();
