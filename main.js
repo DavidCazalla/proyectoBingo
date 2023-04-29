@@ -206,7 +206,7 @@ function addClickLinePlayer(){
       } else {
         arrayWinLinePlayer.push(e);
       }
-      //winLinePlayer()
+      winLinePlayer()
     });
   });
 }
