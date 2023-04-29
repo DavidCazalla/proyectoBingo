@@ -31,6 +31,12 @@ let arrayWinLineTwoCpu = []
 let arrayWinLineThreeCpu = []
 let contador = 0
 
+// funcion boton para sacar los numeros del bombo
+button.addEventListener("click", () => {
+    //numberRandomUnique();
+    //visualArrayHistory();
+});
+
 //  funcion para sacar numero aleatorio
 function getnumberRandom() {
     const min = 1;
