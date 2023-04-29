@@ -357,7 +357,7 @@ function eliminateLineTwoCpu() {
           } else {
             arrayWinLineTwoCpu.push(arrayLineTwoCpu[a]);
           }
-          //winLineTwoCpu()
+          winLineTwoCpu()
         }
       }
     }
