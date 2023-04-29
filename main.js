@@ -367,7 +367,7 @@ function eliminateLineTwoCpu() {
 function winLineTwoCpu() {
     if (arrayWinLineTwoCpu.length === 5) {
       contador++
-      //lineCpu()
+      lineCpu()
     }
 }
 
