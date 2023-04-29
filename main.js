@@ -370,3 +370,15 @@ function winLineTwoCpu() {
       //lineCpu()
     }
 }
+
+// funcion para sacar los 5 ultimos numeros de la linea 3
+function FiveThreeCpu() {
+    for (let a = 0; a < cells.length; a++) {
+      for (let i = 10; i < 15; i++) {
+        arrayLineThreeCpu.push(cells[i]);
+      }
+      console.log(arrayLineThreeCpu)
+      return arrayLineThreeCpu;
+    }
+  }
+FiveThreeCpu()
