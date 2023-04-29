@@ -11,3 +11,28 @@
     justify-content: space-around;
     align-items: center;
 }
+.head h1{
+    font-size: 100px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+}
+.b{
+    color: red;
+}
+.i{
+    color: yellow;
+}
+.n{
+    color: greenyellow;
+}
+.g{
+    color: aqua;
+}
+.o{
+    color: rgb(181, 0, 181);
+}
+.u {
+    color: orange;
+}
