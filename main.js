@@ -403,7 +403,7 @@ function eliminateLineThreeCpu() {
 function winLineThreeCpu() {
     if (arrayWinLineThreeCpu.length === 5) {
       contador++
-        //lineCpu()
+      lineCpu()
     }
 }
 
