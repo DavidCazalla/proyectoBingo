@@ -406,3 +406,11 @@ function winLineThreeCpu() {
         //lineCpu()
     }
 }
+
+// funcion de alerta linea cpu 3
+function lineCpu(){
+    if(contador === 1){
+      h3.textContent = "La maquina ha cantado linea + 50  puntos";
+      comments.append(h3);
+    }
+}
