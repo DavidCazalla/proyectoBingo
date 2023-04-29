@@ -146,5 +146,23 @@ function addClickableToCartonPlayer() {
         //winBingoPlayer();
       });
     });
+}
+addClickableToCartonPlayer()
+
+// funcion que tacha automaticamente el div cpu
+let cells = document.querySelectorAll(".cpu")
+function eliminateCpu() {
+  cells = document.querySelectorAll(".cpu")
+  for (let i = 0; i < arrayHistory.length; i++) {
+    for (let a = 0; a < cells.length; a++) {
+      if (arrayHistory[i] == cells[a].textContent) {
+        cells[a].classList.add("eliminate");
+        if (arrayBingoCpu.includes(cells[a])) {
+        } else {
+          arrayBingoCpu.push(cells[a]);
+        }
+      }
+    }
   }
-  addClickableToCartonPlayer()
+  //winBingoCpu();
+}
