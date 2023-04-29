@@ -244,3 +244,13 @@ function winLineTwoPlayer() {
       //linePlayer()
     }
 }
+
+// funcion para terner en un array los 5 ultimos numeros de la linea player
+function FiveThreePlayer() {
+    for (let a = 0; a < cell.length; a++) {
+      for (let i = 10; i < 15; i++) {
+        arrayLineThreePlayer.push(cell[i]);
+      }
+      return arrayLineThreePlayer;
+    }
+}
