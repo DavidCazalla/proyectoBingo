@@ -180,3 +180,7 @@ function winBingoCpu() {
       alert("BINGO!!! LA MAQUINA A GANADO");
     }
 }
+
+// crear el h3 para que salga cuando se canta linea
+let h3 = document.createElement("h3");
+h3.setAttribute("class", "line");
