@@ -61,3 +61,27 @@
     font-size: 25px;
     cursor: pointer;
 }
+.numberCpu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid  black;
+}
+.cpu{
+    border: solid 2px black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.cartons{
+    display: flex;
+    justify-content: space-around;
+    width: 1300px;
+    align-items: center;
+}
