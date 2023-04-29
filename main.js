@@ -335,3 +335,13 @@ function winLineCpu() {
     }
 }
 
+// funcion para coger los 5 numeros de la linea 2 cpu
+function FiveTwoCpu() {
+    for (let a = 0; a < cells.length; a++) {
+      for (let i = 5; i < 10; i++) {
+        arrayLineTwoCpu.push(cells[i]);
+      }
+      return arrayLineTwoCpu;
+    }
+}
+FiveTwoCpu()
