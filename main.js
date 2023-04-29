@@ -321,7 +321,7 @@ function eliminateLineCpu(){
         } else {
           arrayWinLineCpu.push(arrayLineCpu[a]);
         }
-        //winLineCpu()
+        winLineCpu()
       }
     }
   }
