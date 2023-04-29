@@ -167,9 +167,16 @@ function eliminateCpu() {
   //winBingoCpu();
 }
 
-// funcion que jugador gane el bingo
+// funcion que jugador gana el bingo
 function winBingoPlayer() {
     if (arrayBingoPlayer.length === 15) {
       alert("BINGO!!! EL JUGADOR A GANADO");
+    }
+}
+
+// funcion  que cpu gana el bingo
+function winBingoCpu() {
+    if (arrayBingoCpu.length === 15) {
+      alert("BINGO!!! LA MAQUINA A GANADO");
     }
 }
