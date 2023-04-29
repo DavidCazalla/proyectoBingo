@@ -1,6 +1,11 @@
+
+let container = document.querySelector(".container")
+let containerBalls = document.querySelector(".containerBalls")
+
+let arrayPlayer = []
 let arrayHistory = []
 let numRandom
-
+let balls
 //  funcion para sacar numero aleatorio
 function getnumberRandom() {
     const min = 1;
@@ -29,3 +34,17 @@ function visualArrayHistory() {
       containerBalls.append(balls);
     }
   }
+
+// funcion para crear los 15 numeros del jugador aleatorios
+function arrayCardsPlayer() {
+    for (let i = 0; i < 15; i++) {
+      random = getnumberRandom();
+      if (!arrayPlayer.includes(random)) {
+        arrayPlayer.push(random);
+      } else {
+        i--;
+      }
+    }
+    return arrayPlayer;
+  }
+  arrayCardsPlayer();
