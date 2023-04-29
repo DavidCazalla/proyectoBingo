@@ -46,6 +46,7 @@ function numberRandomUnique() {
       eliminateCpu()
       eliminateLineCpu()
       eliminateLineTwoCpu()
+      eliminateLineThreeCpu()
     } else {
       numberRandomUnique(arrayHistory);
     }
