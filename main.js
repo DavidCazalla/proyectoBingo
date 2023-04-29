@@ -91,6 +91,14 @@ function arrayCardsCpu() {
         i--;
       }
     }
+    
     return arrayCpu;
 }
 arrayCardsCpu();
+
+// Funcion que ordena de menor mayor los array de la cpu
+function orderArrayCpu(){
+    arrayCpu.sort(function (a, b) {
+      return a - b;
+    });
+  }
