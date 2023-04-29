@@ -43,10 +43,10 @@ function numberRandomUnique() {
     numRandom = getnumberRandom(); 
     if (!arrayHistory.includes(numRandom)) {
       arrayHistory.push(numRandom);
+      eliminateCpu()
     } else {
       numberRandomUnique(arrayHistory);
     }
-    console.log(arrayHistory)
     return numRandom;
 }
 
