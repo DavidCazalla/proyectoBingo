@@ -8,10 +8,14 @@ let comments = document.querySelector(".comments")
 const button = document.getElementById("button")
 const clean = document.getElementById("clean")
 
-let arrayPlayer = []
-let arrayHistory = []
 let numRandom
 let balls
+let arrayPlayer = []
+let arrayHistory = []
+let cardPlayer = []
+let arrayCpu = []
+let cardCpu = []
+
 //  funcion para sacar numero aleatorio
 function getnumberRandom() {
     const min = 1;
@@ -76,3 +80,17 @@ function introduceDivPlayer() {
     }
 }
 introduceDivPlayer()
+
+// funcion que crea los 15 numeros aleatorios de la cpu
+function arrayCardsCpu() {
+    for (let i = 0; i < 15; i++) {
+      random = getnumberRandom();
+      if (!arrayCpu.includes(random)) {
+        arrayCpu.push(random);
+      } else {
+        i--;
+      }
+    }
+    return arrayCpu;
+}
+arrayCardsCpu();
