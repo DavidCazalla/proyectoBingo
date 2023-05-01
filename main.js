@@ -46,6 +46,7 @@ clean.addEventListener("click", () => {
   arrayPlayer = []
   arrayCpu = []
   arrayCardsPlayer()
+  arrayCardsCpu()
   arrayHistory = []
   containerBalls.replaceChildren()
   cartonCpu.replaceChildren()
