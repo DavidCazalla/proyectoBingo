@@ -60,6 +60,7 @@ clean.addEventListener("click", () => {
   addClickableToCartonPlayer()
   addClickLinePlayer()
   addClickLineTwoPlayer()
+  addClickLineThreePlayer()
   arrayLineCpu = []
   arrayLineTwoCpu = []
   arrayLineThreeCpu = []
