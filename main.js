@@ -1,6 +1,6 @@
 
 //let container = document.querySelector(".container")
-console.log("hola")
+
 let containerBalls = document.querySelector(".containerBalls")
 let cartonPlayer = document.querySelector(".cartonPlayer")
 let cartonCpu = document.querySelector(".cartonCpu")
@@ -51,27 +51,27 @@ clean.addEventListener("click", () => {
   containerBalls.replaceChildren()
   cartonCpu.replaceChildren()
   cartonPlayer.replaceChildren()
+  introduceDivCpu()
+  introduceDivPlayer()
   comments.innerHTML = ''
   arrayWinLinePlayer = []
   arrayWinLineTwoPlayer = []
   arrayWinLineThreePlayer = []
-  introduceDivCpu()
-  introduceDivPlayer()
   addClickableToCartonPlayer()
   addClickLinePlayer()
   addClickLineTwoPlayer()
   addClickLineThreePlayer()
-  fiveCpu()
-  FiveTwoCpu()
-  FiveThreeCpu()
   arrayLineCpu = []
   arrayLineTwoCpu = []
   arrayLineThreeCpu = []
   arrayWinLineCpu = []
   arrayWinLineTwoCpu = []
   arrayWinLineThreeCpu = []
-  contador = 0
   cells = document.querySelectorAll(".cpu")
+  fiveCpu()
+  FiveTwoCpu()
+  FiveThreeCpu()
+  contador = 0
 })
 
 //  funcion para sacar numero aleatorio
@@ -363,7 +363,6 @@ function eliminateLineCpu(){
       if (arrayHistory[i] == arrayLineCpu[a].textContent) {
         arrayLineCpu[a].classList.add("eliminate");
         if (arrayWinLineCpu.includes(arrayLineCpu[a])) {
-          console.log(arrayWinLineCpu[a])
         } else {
           arrayWinLineCpu.push(arrayLineCpu[a]);
         }
@@ -399,7 +398,6 @@ function eliminateLineTwoCpu() {
         if (arrayHistory[i] == arrayLineTwoCpu[a].textContent) {
           arrayLineTwoCpu[a].classList.add("eliminate");
           if (arrayWinLineTwoCpu.includes(arrayLineTwoCpu[a])) {
-            console.log(arrayWinLineTwoCpu)
           } else {
             arrayWinLineTwoCpu.push(arrayLineTwoCpu[a]);
           }
@@ -438,7 +436,6 @@ function eliminateLineThreeCpu() {
           } else {
             arrayWinLineThreeCpu.push(arrayLineThreeCpu[a]);
           }
-          console.log(arrayWinLineThreeCpu, 'linea 3')
           winLineThreeCpu()
         }
       }
