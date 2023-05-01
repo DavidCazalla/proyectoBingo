@@ -62,6 +62,7 @@ clean.addEventListener("click", () => {
   addClickLineTwoPlayer()
   addClickLineThreePlayer()
   fiveCpu()
+  FiveTwoCpu()
   arrayLineCpu = []
   arrayLineTwoCpu = []
   arrayLineThreeCpu = []
