@@ -58,6 +58,7 @@ clean.addEventListener("click", () => {
   introduceDivCpu()
   introduceDivPlayer()
   addClickableToCartonPlayer()
+  addClickLinePlayer()
   arrayLineCpu = []
   arrayLineTwoCpu = []
   arrayLineThreeCpu = []
