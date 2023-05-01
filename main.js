@@ -55,6 +55,7 @@ clean.addEventListener("click", () => {
   arrayWinLinePlayer = []
   arrayWinLineTwoPlayer = []
   arrayWinLineThreePlayer = []
+  introduceDivCpu()
   arrayLineCpu = []
   arrayLineTwoCpu = []
   arrayLineThreeCpu = []
