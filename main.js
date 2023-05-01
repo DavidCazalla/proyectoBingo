@@ -41,6 +41,25 @@ button.addEventListener("click", () => {
 // funcion boton reset
 // Hacer que funcione el boton de reiniciar
 clean.addEventListener("click", () => {
+  arrayBingoPlayer = []
+  arrayBingoCpu = []
+  arrayPlayer = []
+  arrayCpu = []
+  arrayHistory = []
+  containerBalls.replaceChildren()
+  cartonCpu.replaceChildren()
+  cartonPlayer.replaceChildren()
+  comments.innerHTML = ''
+  arrayWinLinePlayer = []
+  arrayWinLineTwoPlayer = []
+  arrayWinLineThreePlayer = []
+  arrayLineCpu = []
+  arrayLineTwoCpu = []
+  arrayLineThreeCpu = []
+  arrayWinLineCpu = []
+  arrayWinLineTwoCpu = []
+  arrayWinLineThreeCpu = []
+  contador = 0
 
 })
 
