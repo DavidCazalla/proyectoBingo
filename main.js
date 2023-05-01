@@ -1,5 +1,6 @@
 
-let container = document.querySelector(".container")
+//let container = document.querySelector(".container")
+console.log("hola")
 let containerBalls = document.querySelector(".containerBalls")
 let cartonPlayer = document.querySelector(".cartonPlayer")
 let cartonCpu = document.querySelector(".cartonCpu")
@@ -36,6 +37,12 @@ button.addEventListener("click", () => {
     numberRandomUnique();
     visualArrayHistory();
 });
+
+// funcion boton reset
+// Hacer que funcione el boton de reiniciar
+clean.addEventListener("click", () => {
+
+})
 
 //  funcion para sacar numero aleatorio
 function getnumberRandom() {
