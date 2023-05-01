@@ -68,7 +68,7 @@ clean.addEventListener("click", () => {
   arrayWinLineTwoCpu = []
   arrayWinLineThreeCpu = []
   contador = 0
-
+  cells = document.querySelectorAll(".cpu")
 })
 
 //  funcion para sacar numero aleatorio
