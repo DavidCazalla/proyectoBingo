@@ -182,14 +182,14 @@ introduceDivCpu()
 let cell = document.querySelectorAll(".player")
 function addClickableToCartonPlayer() {
     cell = document.querySelectorAll(".player")
-    cell.forEach((e) => {
-      e.addEventListener("click", () => {
+    cell.forEach((cellPlayer) => {
+      cellPlayer.addEventListener("click", () => {
         for (let i = 0; i < arrayHistory.length; i++){
-          if(arrayHistory[i] == e.textContent){
-            e.classList.add("eliminate");
-            if (arrayBingoPlayer.includes(e)) {
+          if(arrayHistory[i] == cellPlayer.textContent){
+            cellPlayer.classList.add("eliminate");
+            if (arrayBingoPlayer.includes(cellPlayer)) {
           } else {
-            arrayBingoPlayer.push(e);
+            arrayBingoPlayer.push(cellPlayer);
           }
             winBingoPlayer();
           }
@@ -249,14 +249,14 @@ function fivePlayer() {
 let lineOnePlayer
 function addClickLinePlayer(){
   lineOnePlayer = fivePlayer()
-  arrayLinePlayer.forEach((e) => {
-    e.addEventListener("click", () => {
+  arrayLinePlayer.forEach((cellLineOnePlayer) => {
+    cellLineOnePlayer.addEventListener("click", () => {
       for (let i = 0; i < arrayHistory.length; i++){
-        if(arrayHistory[i] == e.textContent){
-          e.classList.add("eliminate");
-          if (arrayWinLinePlayer.includes(e)) {
+        if(arrayHistory[i] == cellLineOnePlayer.textContent){
+          cellLineOnePlayer.classList.add("eliminate");
+          if (arrayWinLinePlayer.includes(cellLineOnePlayer)) {
           } else {
-            arrayWinLinePlayer.push(e);
+            arrayWinLinePlayer.push(cellLineOnePlayer);
           }
           winLinePlayer()
         }
@@ -288,14 +288,14 @@ function fiveTwoPlayer() {
 let lineTwoPlayer
 function addClickLineTwoPlayer(){
   lineTwoPlayer = fiveTwoPlayer()
-  arrayLineTwoPlayer.forEach((e) => {
-        e.addEventListener("click", () => {
+  arrayLineTwoPlayer.forEach((cellLineTwoPlayer) => {
+    cellLineTwoPlayer.addEventListener("click", () => {
           for (let i = 0; i < arrayHistory.length; i++){
-            if(arrayHistory[i] == e.textContent){
-              e.classList.add("eliminate");
-              if (arrayWinLineTwoPlayer.includes(e)) {
+            if(arrayHistory[i] == cellLineTwoPlayer.textContent){
+              cellLineTwoPlayer.classList.add("eliminate");
+              if (arrayWinLineTwoPlayer.includes(cellLineTwoPlayer)) {
               } else {
-                arrayWinLineTwoPlayer.push(e);
+                arrayWinLineTwoPlayer.push(cellLineTwoPlayer);
               }
               winLineTwoPlayer()
             }
@@ -327,14 +327,14 @@ function FiveThreePlayer() {
 let lineThreePlayer
 function addClickLineThreePlayer(){
     lineThreePlayer = FiveThreePlayer()
-    arrayLineThreePlayer.forEach((e) => {
-      e.addEventListener("click", () => {
+    arrayLineThreePlayer.forEach((cellLineThreePlayer) => {
+      cellLineThreePlayer.addEventListener("click", () => {
         for (let i = 0; i < arrayHistory.length; i++){
-          if(arrayHistory[i] == e.textContent){
-            e.classList.add("eliminate")
-            if (arrayWinLineThreePlayer.includes(e)) {
+          if(arrayHistory[i] == cellLineThreePlayer.textContent){
+            cellLineThreePlayer.classList.add("eliminate")
+            if (arrayWinLineThreePlayer.includes(cellLineThreePlayer)) {
             } else {
-              arrayWinLineThreePlayer.push(e);
+              arrayWinLineThreePlayer.push(cellLineThreePlayer);
             }
             winLineThreePlayer()
           }
