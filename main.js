@@ -329,12 +329,16 @@ function addClickLineThreePlayer(){
     lineThreePlayer = FiveThreePlayer()
     arrayLineThreePlayer.forEach((e) => {
       e.addEventListener("click", () => {
-        e.classList.add("eliminate")
-        if (arrayWinLineThreePlayer.includes(e)) {
-        } else {
-          arrayWinLineThreePlayer.push(e);
+        for (let i = 0; i < arrayHistory.length; i++){
+          if(arrayHistory[i] == e.textContent){
+            e.classList.add("eliminate")
+            if (arrayWinLineThreePlayer.includes(e)) {
+            } else {
+              arrayWinLineThreePlayer.push(e);
+            }
+            winLineThreePlayer()
+          }
         }
-        winLineThreePlayer()
       })
     })
   }
