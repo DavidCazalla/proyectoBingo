@@ -251,16 +251,16 @@ function addClickLinePlayer(){
   lineOnePlayer = fivePlayer()
   arrayLinePlayer.forEach((e) => {
     e.addEventListener("click", () => {
-      //for (let i = 0; i < arrayHistory.length; i++){
-        //if(arrayHistory[i] == e.textContent){
+      for (let i = 0; i < arrayHistory.length; i++){
+        if(arrayHistory[i] == e.textContent){
           e.classList.add("eliminate");
           if (arrayWinLinePlayer.includes(e)) {
           } else {
             arrayWinLinePlayer.push(e);
           }
           winLinePlayer()
-        //}
-      //}
+        }
+      }
     });
   });
 }
