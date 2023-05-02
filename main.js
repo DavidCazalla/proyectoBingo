@@ -289,14 +289,18 @@ let lineTwoPlayer
 function addClickLineTwoPlayer(){
   lineTwoPlayer = fiveTwoPlayer()
   arrayLineTwoPlayer.forEach((e) => {
-    e.addEventListener("click", () => {
-      e.classList.add("eliminate");
-      if (arrayWinLineTwoPlayer.includes(e)) {
-      } else {
-        arrayWinLineTwoPlayer.push(e);
+    for (let i = 0; i < arrayHistory.length; i++){
+      if(arrayHistory[i] == e.textContent){
+        e.addEventListener("click", () => {
+          e.classList.add("eliminate");
+          if (arrayWinLineTwoPlayer.includes(e)) {
+          } else {
+            arrayWinLineTwoPlayer.push(e);
+          }
+          winLineTwoPlayer()
+        });
       }
-      winLineTwoPlayer()
-    });
+    }
   });
 }
 addClickLineTwoPlayer()
