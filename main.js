@@ -269,7 +269,13 @@ addClickLinePlayer()
 // funcion player para introducir lo div tachados en un arraylineuno
 function winLinePlayer() {
     if (arrayWinLinePlayer.length === 5) {
-      contador++
+      contador = 5
+      linePlayer()
+    }else if (arrayWinLineTwoPlayer.length === 5) {
+      contador = 15
+      linePlayer()
+    }if (arrayWinLineThreePlayer.length === 5) {
+      contador = 50
       linePlayer()
     }
 }
@@ -297,21 +303,13 @@ function addClickLineTwoPlayer(){
               } else {
                 arrayWinLineTwoPlayer.push(cellLineTwoPlayer);
               }
-              winLineTwoPlayer()
+              winLinePlayer()
             }
           }
         });
   });
 }
 addClickLineTwoPlayer()
-
-// funcion para cantar la linea 2 de player
-function winLineTwoPlayer() {
-    if (arrayWinLineTwoPlayer.length === 5) {
-      contador++
-      linePlayer()
-    }
-}
 
 // funcion para terner en un array los 5 ultimos numeros de la linea player
 function FiveThreePlayer() {
@@ -336,7 +334,7 @@ function addClickLineThreePlayer(){
             } else {
               arrayWinLineThreePlayer.push(cellLineThreePlayer);
             }
-            winLineThreePlayer()
+            winLinePlayer()
           }
         }
       })
@@ -344,19 +342,17 @@ function addClickLineThreePlayer(){
 }
 addClickLineThreePlayer()
 
-// funcion para cantar la linea 3 de player
-function winLineThreePlayer() {
-    if (arrayWinLineThreePlayer.length === 5) {
-      contador++
-      linePlayer()
-    }
-}
-
 // funcion para que salga alerta de linea player
 function linePlayer(){
-    if(contador === 1){
-      h3.textContent = "El jugador a cantado linea + 50 puntos";
+    if(contador === 5){
+      h3.textContent = "El jugador a cantado linea uno";
       comments.append(h3);
+    }else if (contador === 15){
+      h3.textContent = "El jugador ha cantado linea dos";
+      comments.append(h3)
+    }else if(contador === 50){
+      h3.textContent = "El jugador ha cantado linea tres";
+      comments.append(h3)
     }
 }
 
