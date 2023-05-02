@@ -184,12 +184,16 @@ function addClickableToCartonPlayer() {
     cell = document.querySelectorAll(".player")
     cell.forEach((e) => {
       e.addEventListener("click", () => {
-        e.classList.add("eliminate");
-        if (arrayBingoPlayer.includes(e)) {
-        } else {
-          arrayBingoPlayer.push(e);
+        for (let i = 0; i < arrayHistory.length; i++){
+          if(arrayHistory[i] == e.textContent){
+            e.classList.add("eliminate");
+            if (arrayBingoPlayer.includes(e)) {
+          } else {
+            arrayBingoPlayer.push(e);
+          }
+            winBingoPlayer();
+          }
         }
-        winBingoPlayer();
       });
     });
 }
@@ -247,12 +251,16 @@ function addClickLinePlayer(){
   lineOnePlayer = fivePlayer()
   arrayLinePlayer.forEach((e) => {
     e.addEventListener("click", () => {
-      e.classList.add("eliminate");
-      if (arrayWinLinePlayer.includes(e)) {
-      } else {
-        arrayWinLinePlayer.push(e);
-      }
-      winLinePlayer()
+      //for (let i = 0; i < arrayHistory.length; i++){
+        //if(arrayHistory[i] == e.textContent){
+          e.classList.add("eliminate");
+          if (arrayWinLinePlayer.includes(e)) {
+          } else {
+            arrayWinLinePlayer.push(e);
+          }
+          winLinePlayer()
+        //}
+      //}
     });
   });
 }
