@@ -391,7 +391,13 @@ function eliminateLineCpu(){
 // funcion para cantar linea 1 de la cpu
 function winLineCpu() {
     if (arrayWinLineCpu.length === 5) {
-      contador++
+      contador = 1
+      lineCpu()
+    }else if (arrayWinLineTwoCpu.length === 5) {
+      contador = 2
+      lineCpu()
+    }else if(arrayWinLineThreeCpu.length === 5){
+      contador = 4
       lineCpu()
     }
 }
@@ -417,17 +423,9 @@ function eliminateLineTwoCpu() {
           } else {
             arrayWinLineTwoCpu.push(arrayLineTwoCpu[a]);
           }
-          winLineTwoCpu()
+          winLineCpu()
         }
       }
-    }
-}
-
-// funcion para contar la linea 2 de la cpu
-function winLineTwoCpu() {
-    if (arrayWinLineTwoCpu.length === 5) {
-      contador++
-      lineCpu()
     }
 }
 
@@ -452,24 +450,22 @@ function eliminateLineThreeCpu() {
           } else {
             arrayWinLineThreeCpu.push(arrayLineThreeCpu[a]);
           }
-          winLineThreeCpu()
+          winLineCpu()
         }
       }
-    }
-}
-
-// funcion de cantar linea 3 cpu
-function winLineThreeCpu() {
-    if (arrayWinLineThreeCpu.length === 5) {
-      contador++
-      lineCpu()
     }
 }
 
 // funcion de alerta linea cpu 3
 function lineCpu(){
     if(contador === 1){
-      h3.textContent = "La maquina ha cantado linea + 50  puntos";
+      h3.textContent = "La maquina ha cantado linea uno";
       comments.append(h3);
+    }else if (contador === 2){
+      h3.textContent = "La maquina ha cantado linea dos";
+      comments.append(h3)
+    }else if(contador === 4){
+      h3.textContent = "La maquina ha cantado linea tres";
+      comments.append(h3)
     }
 }
