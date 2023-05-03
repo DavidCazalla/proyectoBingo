@@ -6,7 +6,7 @@
     width: 100%;
     height: 100vh;
     background-color: rgb(82, 95, 112);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -136,4 +136,46 @@
 .eliminate{
     text-decoration: line-through;
     color: red;
+}
+.modalContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(141, 128, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.myModal{
+    width: 600px;
+    height: 400px;
+    background-color: rgb(55, 55, 55);
+    display: flex;
+    flex-direction: column;
+}
+.close{
+    font-size: 40px;
+    display: flex;
+    margin-left: 560px;
+    margin-right: 20px;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+.close:hover{
+    color: red;
+}
+.titleModal{
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.win{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
 }
