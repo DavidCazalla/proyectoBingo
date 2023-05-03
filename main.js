@@ -223,8 +223,8 @@ function eliminateCpu() {
 // funcion que jugador gana el bingo
 function winBingoPlayer() {
     if (arrayBingoPlayer.length === 15) {
-      singBingoPlayer()
-      contadorBingo++
+      contadorBingo = 1
+      singBingo()
     }
     disableButton()
 }
@@ -232,8 +232,8 @@ function winBingoPlayer() {
 // funcion  que cpu gana el bingo
 function winBingoCpu() {
     if (arrayBingoCpu.length === 15) {
-      singBingoCpu()
-      contadorBingo++
+      contadorBingo = 2
+      singBingo()
     }
     disableButton()
 }
@@ -463,7 +463,7 @@ function lineCpu(){
 
 // funcion para desabilitar el boton
 function disableButton(){
-  if(contadorBingo === 1){
+  if(contadorBingo === 1 || contadorBingo === 2){
     button.disabled = true
   }else if (contadorBingo === 0){
     button.disabled = false
@@ -471,21 +471,19 @@ function disableButton(){
 }
 
 // funcion para cantar bingo player
-function singBingoPlayer(){
-  container.style.display = "none"
-  containerTwo.style.display = "flex"
-  win.textContent = "El jugador ha cantado bingo"
+function singBingo(){
+  if(contadorBingo === 1){
+    container.style.display = "none"
+    containerTwo.style.display = "flex"
+    win.textContent = "El jugador ha cantado bingo"
+  }else if(contadorBingo === 2){
+    container.style.display = "none"
+    containerTwo.style.display = "flex"
+    win.textContent = "La maquina ha cantado bingo"
+  }
 }
-
-/*// funcion para cantar bingo la cpu
-function singBingoCpu(){
-  container.style.display = "none"
-  containerTwo.style.display = "flex"
-  win.textContent = "La maquina ha cantado bingo"
-}
-
 // funcion del botom close del modal
-span.onclick = function(){
+/*span.onclick = function(){
   containerTwo.style.display = "none"
   container.style.display = "flex"
 }*/
