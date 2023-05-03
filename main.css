@@ -229,7 +229,10 @@
 }
 /*Tables*/
 @media (min-width:768px){
-
+    .containerSeconds{
+        width: 700px;
+        height: auto;
+    }
 }
 /*Desktops*/
 @media (min-width:992px){
