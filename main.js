@@ -1,6 +1,5 @@
 
-//let container = document.querySelector(".container")
-
+let container = document.querySelector(".container")
 let containerBalls = document.querySelector(".containerBalls")
 let cartonPlayer = document.querySelector(".cartonPlayer")
 let cartonCpu = document.querySelector(".cartonCpu")
@@ -8,6 +7,9 @@ let cartons = document.querySelector(".cartons")
 let comments = document.querySelector(".comments")
 const button = document.getElementById("button")
 const clean = document.getElementById("clean")
+let containerTwo = document.querySelector(".modalContainer")
+let win = document.querySelector(".win")
+let span = document.querySelector(".close")
 
 let numRandom
 let balls
@@ -221,7 +223,7 @@ function eliminateCpu() {
 // funcion que jugador gana el bingo
 function winBingoPlayer() {
     if (arrayBingoPlayer.length === 15) {
-      alert("BINGO!!! EL JUGADOR A GANADO");
+      singBingoPlayer()
       contadorBingo++
     }
     disableButton()
@@ -230,7 +232,7 @@ function winBingoPlayer() {
 // funcion  que cpu gana el bingo
 function winBingoCpu() {
     if (arrayBingoCpu.length === 15) {
-      alert("BINGO!!! LA MAQUINA A GANADO");
+      singBingoCpu()
       contadorBingo++
     }
     disableButton()
@@ -467,3 +469,23 @@ function disableButton(){
     button.disabled = false
   }
 }
+
+// funcion para cantar bingo player
+function singBingoPlayer(){
+  container.style.display = "none"
+  containerTwo.style.display = "flex"
+  win.textContent = "El jugador ha cantado bingo"
+}
+
+/*// funcion para cantar bingo la cpu
+function singBingoCpu(){
+  container.style.display = "none"
+  containerTwo.style.display = "flex"
+  win.textContent = "La maquina ha cantado bingo"
+}
+
+// funcion del botom close del modal
+span.onclick = function(){
+  containerTwo.style.display = "none"
+  container.style.display = "flex"
+}*/

@@ -6,7 +6,7 @@
     width: 100%;
     height: 100vh;
     background-color: rgb(82, 95, 112);
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -140,22 +140,24 @@
 .modalContainer{
     width: 100%;
     height: 100vh;
-    background-color: rgb(141, 128, 128);
-    display: flex;
+    background-color: rgb(255, 255, 255);
+    display: none;
     justify-content: center;
     align-items: center; 
 }
 .myModal{
     width: 600px;
     height: 400px;
-    background-color: rgb(55, 55, 55);
+    background-color: rgb(37, 40, 103);
     display: flex;
     flex-direction: column;
+    border-radius: 50px;
 }
 .close{
     font-size: 40px;
     display: flex;
-    margin-left: 560px;
+    margin-top: 5px;
+    margin-left: 540px;
     margin-right: 20px;
     color: white;
     margin-bottom: 20px;
