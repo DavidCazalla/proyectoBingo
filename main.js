@@ -31,6 +31,7 @@ let arrayWinLineCpu = []
 let arrayWinLineTwoCpu = []
 let arrayWinLineThreeCpu = []
 let contador = 0
+let contadorBingo = 0
 
 // funcion boton para sacar los numeros del bombo
 button.addEventListener("click", () => {
@@ -72,6 +73,8 @@ clean.addEventListener("click", () => {
   FiveTwoCpu()
   FiveThreeCpu()
   contador = 0
+  contadorBingo = 0
+  disableButton()
 })
 
 //  funcion para sacar numero aleatorio
@@ -221,14 +224,18 @@ function eliminateCpu() {
 function winBingoPlayer() {
     if (arrayBingoPlayer.length === 15) {
       alert("BINGO!!! EL JUGADOR A GANADO");
+      contadorBingo++
     }
+    disableButton()
 }
 
 // funcion  que cpu gana el bingo
 function winBingoCpu() {
     if (arrayBingoCpu.length === 15) {
       alert("BINGO!!! LA MAQUINA A GANADO");
+      contadorBingo++
     }
+    disableButton()
 }
 
 // crear el h3 para que salga cuando se canta linea
@@ -464,4 +471,13 @@ function lineCpu(){
       h3.textContent = "La maquina ha cantado linea tres";
       comments.append(h3)
     }
+}
+
+// funcion para desabilitar el boton
+function disableButton(){
+  if(contadorBingo === 1){
+    button.disabled = true
+  }else if (contadorBingo === 0){
+    button.disabled = false
+  }
 }
