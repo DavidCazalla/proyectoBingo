@@ -276,13 +276,13 @@ addClickLinePlayer()
 // funcion player para introducir lo div tachados en un arraylineuno
 function winLinePlayer() {
     if (arrayWinLinePlayer.length === 5) {
-      contador = 5
+      contador ++
       linePlayer()
     }else if (arrayWinLineTwoPlayer.length === 5) {
-      contador = 15
+      contador ++
       linePlayer()
     }if (arrayWinLineThreePlayer.length === 5) {
-      contador = 50
+      contador ++
       linePlayer()
     }
 }
@@ -351,15 +351,9 @@ addClickLineThreePlayer()
 
 // funcion para que salga alerta de linea player
 function linePlayer(){
-    if(contador === 5){
-      h3.textContent = "El jugador a cantado linea uno";
+    if(contador === 1){
+      h3.textContent = "El jugador a cantado linea";
       comments.append(h3);
-    }else if (contador === 15){
-      h3.textContent = "El jugador ha cantado linea dos";
-      comments.append(h3)
-    }else if(contador === 50){
-      h3.textContent = "El jugador ha cantado linea tres";
-      comments.append(h3)
     }
 }
 
@@ -394,13 +388,13 @@ function eliminateLineCpu(){
 // funcion para cantar linea 1 de la cpu
 function winLineCpu() {
     if (arrayWinLineCpu.length === 5) {
-      contador = 1
+      contador ++
       lineCpu()
     }else if (arrayWinLineTwoCpu.length === 5) {
-      contador = 2
+      contador ++
       lineCpu()
     }else if(arrayWinLineThreeCpu.length === 5){
-      contador = 4
+      contador ++
       lineCpu()
     }
 }
@@ -462,15 +456,9 @@ function eliminateLineThreeCpu() {
 // funcion de alerta linea cpu 3
 function lineCpu(){
     if(contador === 1){
-      h3.textContent = "La maquina ha cantado linea uno";
+      h3.textContent = "La maquina ha cantado linea";
       comments.append(h3);
-    }else if (contador === 2){
-      h3.textContent = "La maquina ha cantado linea dos";
-      comments.append(h3)
-    }else if(contador === 4){
-      h3.textContent = "La maquina ha cantado linea tres";
-      comments.append(h3)
-    }
+    }  
 }
 
 // funcion para desabilitar el boton
