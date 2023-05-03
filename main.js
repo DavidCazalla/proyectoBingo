@@ -483,7 +483,7 @@ function singBingo(){
   }
 }
 // funcion del botom close del modal
-/*span.onclick = function(){
+span.onclick = function(){
   containerTwo.style.display = "none"
   container.style.display = "flex"
-}*/
+}
