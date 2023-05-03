@@ -236,7 +236,10 @@
 }
 /*Desktops*/
 @media (min-width:992px){
-
+    .containerSeconds{
+        width: 900px;
+        height: auto;
+    }
 }
 /*Large Desktops*/
 @media (min-width:1200px){
