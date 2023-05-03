@@ -101,12 +101,10 @@ function numberRandomUnique() {
 
 // funcion para crear div que salga en html el historial del numero random
 function visualArrayHistory() {
-    for (let i = 0; i < 1; i++) {
       balls = document.createElement("div");
       balls.setAttribute("class", "balls");
       balls.textContent = numRandom;
       containerBalls.append(balls);
-    }
 }
 
 // funcion para crear los 15 numeros del jugador aleatorios
