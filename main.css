@@ -106,7 +106,7 @@
     flex-wrap: wrap;
     justify-content: start;
     width: 1255px;
-    height: 400px;
+    height: 50px;
 }
 .balls{
     font-size: 20px;
@@ -267,5 +267,10 @@
     .containerSeconds{
         width: 1300px;
         height: 600px;
+    }
+    .containerBalls{
+        width: 1255px;
+        height: 10px;
+        margin-right: 21px;
     }
 }
