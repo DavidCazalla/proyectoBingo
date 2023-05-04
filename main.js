@@ -465,6 +465,7 @@ function lineCpu(){
 function disableButton(){
   if(contadorBingo === 1 || contadorBingo === 2){
     button.disabled = true
+    arrayHistory = []
   }else if (contadorBingo === 0){
     button.disabled = false
   }
