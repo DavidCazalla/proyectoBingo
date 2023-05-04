@@ -247,6 +247,9 @@
         width: 100%;
         height: 100vh;
     }
+    .comments{
+        margin-top: 40px;
+    }
     .cartons{
         flex-wrap: wrap;
         width: 1150px;
