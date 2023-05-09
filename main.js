@@ -240,13 +240,19 @@ function winBingoCpu() {
 let h3 = document.createElement("h3");
 h3.setAttribute("class", "line");
 
-// funcion para crear el array con la primera liena del jugador
+// funcion para crear el array con las lienas del jugador
 function fivePlayer() {
     for (let a = 0; a < cell.length; a++) {
       for (let i = 0; i < 5; i++) {
         arrayLinePlayer.push(cell[i]);
       }
-      return arrayLinePlayer;
+      for (let i = 5; i < 10; i++) {
+          arrayLineTwoPlayer.push(cell[i]);
+      }
+      for (let i = 10; i < 15; i++) {
+        arrayLineThreePlayer.push(cell[i]);
+      }
+      return arrayLinePlayer,arrayLineTwoPlayer,arrayLineThreePlayer;
     }
 }
 
@@ -285,20 +291,10 @@ function winLinePlayer() {
     }
 }
 
-// funcion para coger las 5 segundas lienas de la linea 2 player
-function fiveTwoPlayer() {
-    for (let a = 0; a < cell.length; a++) {
-      for (let i = 5; i < 10; i++) {
-        arrayLineTwoPlayer.push(cell[i]);
-      }
-      return arrayLineTwoPlayer;
-    }
-}
-
 // funcion click para eliminar la linea 2
 let lineTwoPlayer
 function addClickLineTwoPlayer(){
-  lineTwoPlayer = fiveTwoPlayer()
+  lineTwoPlayer = fivePlayer()
   arrayLineTwoPlayer.forEach((cellLineTwoPlayer) => {
     cellLineTwoPlayer.addEventListener("click", () => {
           for (let i = 0; i < arrayHistory.length; i++){
@@ -316,20 +312,10 @@ function addClickLineTwoPlayer(){
 }
 addClickLineTwoPlayer()
 
-// funcion para terner en un array los 5 ultimos numeros de la linea player
-function FiveThreePlayer() {
-    for (let a = 0; a < cell.length; a++) {
-      for (let i = 10; i < 15; i++) {
-        arrayLineThreePlayer.push(cell[i]);
-      }
-      return arrayLineThreePlayer;
-    }
-}
-
 // funcion para tachar la ultima fila de la linea player
 let lineThreePlayer
 function addClickLineThreePlayer(){
-    lineThreePlayer = FiveThreePlayer()
+    lineThreePlayer = fivePlayer()
     arrayLineThreePlayer.forEach((cellLineThreePlayer) => {
       cellLineThreePlayer.addEventListener("click", () => {
         for (let i = 0; i < arrayHistory.length; i++){
