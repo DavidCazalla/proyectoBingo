@@ -357,13 +357,25 @@ function linePlayer(){
     }
 }
 
-// funcion para coger los 5 primeros numeros para crear la liena 1 de la cpu
+// funcion para coger los 15 primeros numeros para crear la lienas de la cpu
 function fiveCpu() {
     for (let a = 0; a < cells.length; a++) {
       for (let i = 0; i < 5; i++) {
         arrayLineCpu.push(cells[i]);
       }
       return arrayLineCpu;
+    }
+    for (let a = 0; a < cells.length; a++) {
+      for (let i = 5; i < 10; i++) {
+        arrayLineTwoCpu.push(cells[i]);
+      }
+      return arrayLineTwoCpu;
+    }
+    for (let a = 0; a < cells.length; a++) {
+      for (let i = 10; i < 15; i++) {
+        arrayLineThreeCpu.push(cells[i]);
+      }
+      return arrayLineThreeCpu;
     }
 }
 fiveCpu()
@@ -399,17 +411,6 @@ function winLineCpu() {
     }
 }
 
-// funcion para coger los 5 numeros de la linea 2 cpu
-function FiveTwoCpu() {
-    for (let a = 0; a < cells.length; a++) {
-      for (let i = 5; i < 10; i++) {
-        arrayLineTwoCpu.push(cells[i]);
-      }
-      return arrayLineTwoCpu;
-    }
-}
-FiveTwoCpu()
-
 // funcion de tachado automatico si el numero del bombo es igual al de la lina 2
 function eliminateLineTwoCpu() {
     for (let i = 0; i < arrayHistory.length; i++) {
@@ -425,17 +426,6 @@ function eliminateLineTwoCpu() {
       }
     }
 }
-
-// funcion para sacar los 5 ultimos numeros de la linea 3
-function FiveThreeCpu() {
-    for (let a = 0; a < cells.length; a++) {
-      for (let i = 10; i < 15; i++) {
-        arrayLineThreeCpu.push(cells[i]);
-      }
-      return arrayLineThreeCpu;
-    }
-  }
-FiveThreeCpu()
 
 // funcion de tachado automatico si el numero de la linea 3 coincide con el bombo
 function eliminateLineThreeCpu() {
