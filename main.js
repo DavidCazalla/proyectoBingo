@@ -72,8 +72,6 @@ clean.addEventListener("click", () => {
   arrayWinLineThreeCpu = []
   cells = document.querySelectorAll(".cpu")
   fiveCpu()
-  FiveTwoCpu()
-  FiveThreeCpu()
   contador = 0
   contadorBingo = 0
   disableButton()
@@ -357,25 +355,19 @@ function linePlayer(){
     }
 }
 
-// funcion para coger los 15 primeros numeros para crear la lienas de la cpu
+// funcion para coger los 15 primeros numeros para crear las lienas de la cpu
 function fiveCpu() {
     for (let a = 0; a < cells.length; a++) {
       for (let i = 0; i < 5; i++) {
         arrayLineCpu.push(cells[i]);
       }
-      return arrayLineCpu;
-    }
-    for (let a = 0; a < cells.length; a++) {
       for (let i = 5; i < 10; i++) {
         arrayLineTwoCpu.push(cells[i]);
       }
-      return arrayLineTwoCpu;
-    }
-    for (let a = 0; a < cells.length; a++) {
       for (let i = 10; i < 15; i++) {
         arrayLineThreeCpu.push(cells[i]);
       }
-      return arrayLineThreeCpu;
+      return arrayLineCpu,arrayLineTwoCpu,arrayLineThreeCpu;
     }
 }
 fiveCpu()
@@ -395,20 +387,6 @@ function eliminateLineCpu(){
       }
     }
   }
-}
-
-// funcion para cantar linea 1 de la cpu
-function winLineCpu() {
-    if (arrayWinLineCpu.length === 5) {
-      contador ++
-      lineCpu()
-    }else if (arrayWinLineTwoCpu.length === 5) {
-      contador ++
-      lineCpu()
-    }else if(arrayWinLineThreeCpu.length === 5){
-      contador ++
-      lineCpu()
-    }
 }
 
 // funcion de tachado automatico si el numero del bombo es igual al de la lina 2
@@ -436,11 +414,26 @@ function eliminateLineThreeCpu() {
           if (arrayWinLineThreeCpu.includes(arrayLineThreeCpu[a])) {
           } else {
             arrayWinLineThreeCpu.push(arrayLineThreeCpu[a]);
+            console.log(arrayWinLineThreeCpu)
           }
           winLineCpu()
         }
       }
     }
+}
+
+// funcion para cantar linea 1 de la cpu
+function winLineCpu() {
+  if (arrayWinLineCpu.length === 5) {
+    contador ++
+    lineCpu()
+  }else if (arrayWinLineTwoCpu.length === 5) {
+    contador ++
+    lineCpu()
+  }else if(arrayWinLineThreeCpu.length === 5){
+    contador ++
+    lineCpu()
+  }
 }
 
 // funcion de alerta linea cpu 3
